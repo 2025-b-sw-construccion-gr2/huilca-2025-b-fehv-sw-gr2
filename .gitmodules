@@ -1,0 +1,6 @@
+[submodule "01.Calculadora/Operaciones/fehv-resta"]
+	path = 01.Calculadora/Operaciones/fehv-resta
+	url = https://github.com/2025-b-sw-construccion-gr2/fehv-resta.git
+[submodule "01.Calculadora/Operaciones/fehv-suma"]
+	path = 01.Calculadora/Operaciones/fehv-suma
+	url = https://github.com/2025-b-sw-construccion-gr2/fehv-suma.git
