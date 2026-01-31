@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0f172a;
+    --panel: rgba(255, 255, 255, 0.06);
+    --panel-strong: rgba(255, 255, 255, 0.12);
+    --accent: #10b981;
+    --accent-2: #f97316;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.12);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, #1e293b, transparent 30%),
+        radial-gradient(circle at 80% 0%, #0f766e, transparent 35%),
+        radial-gradient(circle at 50% 80%, #f97316, transparent 35%), var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 32px;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 4px);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 6px;
+}
+
+.title {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: var(--muted);
+    max-width: 520px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+}
+
+.card.accent {
+    background: linear-gradient(
+        135deg,
+        rgba(16, 185, 129, 0.1),
+        rgba(249, 115, 22, 0.1)
+    );
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.card-header {
+    margin-bottom: 16px;
+}
+
+.card-title {
+    margin: 6px 0 0;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.card-subtitle {
+    margin: 8px 0 0;
+    color: var(--muted);
+}
+
+.pill {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--panel-strong);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+
+.pill-light {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.35);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--text);
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 15px;
+    transition:
+        transform 0.1s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #10b981, #0ea371);
+    color: #0b1725;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+}
+
+.btn.secondary {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #0b1725;
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.35);
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.result {
+    margin: 8px 0 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 18px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}
