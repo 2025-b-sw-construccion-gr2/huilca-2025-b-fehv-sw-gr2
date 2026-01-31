@@ -38,11 +38,18 @@ const destSrcDir = path.join(distDir, 'src');
 console.log('Copiando src...');
 copyDir(srcDir, destSrcDir);
 
-// Copiar Operaciones
+// Copiar Operaciones (solo archivos .js, no submodules)
 const operacionesDir = path.join(__dirname, 'Operaciones');
 const destOperacionesDir = path.join(distDir, 'Operaciones');
 console.log('Copiando Operaciones...');
-copyDir(operacionesDir, destOperacionesDir);
+if (!fs.existsSync(destOperacionesDir)) {
+    fs.mkdirSync(destOperacionesDir, { recursive: true });
+}
+const jsFiles = fs.readdirSync(operacionesDir).filter(f => f.endsWith('.js'));
+for (const file of jsFiles) {
+    fs.copyFileSync(path.join(operacionesDir, file), path.join(destOperacionesDir, file));
+    console.log(`  \u2713 ${file}`);
+}
 
 // Copiar index.html si existe
 const indexPath = path.join(__dirname, 'src', 'index.html');

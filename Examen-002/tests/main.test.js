@@ -1,6 +1,6 @@
 // Importar las funciones de los módulos
-const { sumarNumeros } = require('../Operaciones/fehv-suma/suma.js');
-const { restarNumeros } = require('../Operaciones/fehv-resta/resta.js');
+const { sumarNumeros } = require('../Operaciones/suma.js');
+const { restarNumeros } = require('../Operaciones/resta.js');
 
 describe('Pruebas de Operaciones Matemáticas', () => {
     describe('sumarNumeros', () => {
