@@ -17,7 +17,11 @@ function copyDir(src, dest) {
 
     for (const entry of entries) {
         // Ignorar carpetas .git, node_modules, y archivos ocultos
-        if (entry.name === '.git' || entry.name === 'node_modules' || entry.name.startsWith('.')) {
+        if (
+            entry.name === '.git' ||
+            entry.name === 'node_modules' ||
+            entry.name.startsWith('.')
+        ) {
             continue;
         }
 
@@ -47,7 +51,10 @@ if (!fs.existsSync(destOperacionesDir)) {
 }
 const jsFiles = fs.readdirSync(operacionesDir).filter(f => f.endsWith('.js'));
 for (const file of jsFiles) {
-    fs.copyFileSync(path.join(operacionesDir, file), path.join(destOperacionesDir, file));
+    fs.copyFileSync(
+        path.join(operacionesDir, file),
+        path.join(destOperacionesDir, file)
+    );
     console.log(`  \u2713 ${file}`);
 }
 
