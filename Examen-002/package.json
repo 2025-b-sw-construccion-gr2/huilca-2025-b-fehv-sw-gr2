@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "eslint src/**/*.js Operaciones/**/*.js tests/**/*.js",
-    "format:check": "prettier --check \"**/*.{html,css,js}\"",
-    "format:write": "prettier --write \"**/*.{html,css,js}\"",
+    "lint": "eslint \"src/**/*.js\" \"Operaciones/**/*.js\" \"tests/**/*.js\" --ignore-pattern \"node_modules/\"",
+    "format:check": "prettier --check \"**/*.{html,css,js}\" --ignore-path .gitignore",
+    "format:write": "prettier --write \"**/*.{html,css,js}\" --ignore-path .gitignore",
     "build": "node build.js"
   },
   "keywords": [],

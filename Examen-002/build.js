@@ -16,6 +16,11 @@ function copyDir(src, dest) {
     const entries = fs.readdirSync(src, { withFileTypes: true });
 
     for (const entry of entries) {
+        // Ignorar carpetas .git, node_modules, y archivos ocultos
+        if (entry.name === '.git' || entry.name === 'node_modules' || entry.name.startsWith('.')) {
+            continue;
+        }
+
         const srcPath = path.join(src, entry.name);
         const destPath = path.join(dest, entry.name);
 
