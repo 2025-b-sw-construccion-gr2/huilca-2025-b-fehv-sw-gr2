@@ -9,6 +9,10 @@
 > Aqui tienes un notion con las capturas de pantalla y la explicacion de lo que hicimos paso a paso: [Click aquí!!](https://aromatic-pear-bd2.notion.site/Examen-02-2f30fba7cc0780ffad4ad89f86c375fc?pvs=74)
 
 
+## Preview: 
+<img width="1789" height="1028" alt="image" src="https://github.com/user-attachments/assets/89075e10-437e-4cb6-9af5-2effd0c8aae5" />
+
+
 ## 📋 Descripción del Proyecto
 Este proyecto es una aplicación web simple de calculadora que realiza operaciones matemáticas básicas (suma y resta) en números decimales y binarios. El proyecto implementa un pipeline de CI/CD completo usando GitHub Actions.
 
